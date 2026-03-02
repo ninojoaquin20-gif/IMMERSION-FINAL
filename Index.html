@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- QR Code library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- ── NAVIGATION ───────────────────────────────────────────── -->
+  <nav>
+    <div class="nav-logo">Portfolio</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Portfolio & Resume</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO ─────────────────────────────────────────────────── -->
+  <section class="hero" id="hero">
+
+    <!-- Profile picture -->
+    <div class="profile-ring">
+      <div class="profile-img" id="profileImgWrap">
+        <div class="profile-placeholder" onclick="document.getElementById('profileInput').click()">
+          <svg width="36" height="36" viewBox="0 0 24 24" stroke="#7c5c3e" fill="none" stroke-width="1.5">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+          <span>Add Photo</span>
+        </div>
+      </div>
+    </div>
+    <input type="file" accept="image/*" class="file-input" id="profileInput"
+           onchange="loadImage(event,'profileImgWrap')">
+
+    <p class="hero-title">Creative · Professional · Visionary</p>
+    <h1 class="hero-name">Lagasca Niño Joaquin L.</h1>
+    <p class="hero-bio">
+      Work until your career works for you — Engineering Field 
+    </p>
+    <a href="#about" class="hero-btn">Explore My Work</a>
+
+  </section>
+
+  <!-- ── ABOUT ─────────────────────────────────────────────────── -->
+  <section id="about">
+    <p class="section-label">Get to Know Me</p>
+    <h2 class="section-title">About Me</h2>
+    <div class="divider"></div>
+
+    <div class="about-grid">
+
+      <!-- Text -->
+      <div class="about-text">
+        <p>
+          I am Niño Joaquin L. Lagasca, a graduating student from Jose Rizal University. This portfolio is a collection of my achievements and journey throughout my Senior High School 2nd Semester.
+        </p>
+        <p>
+          It highlights my skills and personal growth in the field of Engineering by attending various seminars/webinars.
+        </p>
+        <p>
+          This is also a collection of first-time experiences of work immersion handling different situations and problems showcasing a wide range of skillsets and solutions. Additionally exhibiting an appropriate attitude in how to show proper work etiquette.
+        </p>
+      </div>
+
+      <!-- Photos -->
+      <div class="about-photos">
+
+        <!-- Photo 1 (wide banner) -->
+        <div class="about-photo" id="aboutPhoto1">
+          <div class="photo-placeholder" onclick="document.getElementById('aboutInput1').click()">
+            <svg width="28" height="28" viewBox="0 0 24 24" stroke="#7c5c3e" fill="none" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <path d="M21 15l-5-5L5 21"/>
+            </svg>
+            <span>Add Photo 1</span>
+          </div>
+        </div>
+        <input type="file" accept="image/*" class="file-input" id="aboutInput1"
+               onchange="loadImage(event,'aboutPhoto1')">
+
+        <!-- Photo 2 -->
+        <div class="about-photo" id="aboutPhoto2">
+          <div class="photo-placeholder" onclick="document.getElementById('aboutInput2').click()">
+            <svg width="28" height="28" viewBox="0 0 24 24" stroke="#7c5c3e" fill="none" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <path d="M21 15l-5-5L5 21"/>
+            </svg>
+            <span>Add Photo 2</span>
+          </div>
+        </div>
+        <input type="file" accept="image/*" class="file-input" id="aboutInput2"
+               onchange="loadImage(event,'aboutPhoto2')">
+
+        <!-- Photo 3 -->
+        <div class="about-photo" id="aboutPhoto3">
+          <div class="photo-placeholder" onclick="document.getElementById('aboutInput3').click()">
+            <svg width="28" height="28" viewBox="0 0 24 24" stroke="#7c5c3e" fill="none" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <path d="M21 15l-5-5L5 21"/>
+            </svg>
+            <span>Add Photo 3</span>
+          </div>
+        </div>
+        <input type="file" accept="image/*" class="file-input" id="aboutInput3"
+               onchange="loadImage(event,'aboutPhoto3')">
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PORTFOLIO & RESUME ─────────────────────────────────────── -->
+  <section id="work" style="border-top: 1px solid var(--soft);">
+    <p class="section-label">My Work</p>
+    <h2 class="section-title">Portfolio &amp; Resume</h2>
+    <div class="divider"></div>
+
+    <div class="cards-row">
+
+      <!-- Portfolio Card -->
+      <div class="card">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" stroke-width="1.8">
+            <rect x="2" y="7" width="20" height="14" rx="2"/>
+            <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/>
+            <line x1="12" y1="12" x2="12" y2="16"/>
+            <line x1="10" y1="14" x2="14" y2="14"/>
+          </svg>
+        </div>
+        <h3>Portfolio</h3>
+        <p>
+          This accumulation and summary of events focuses on the Engineering field. It challenges my ability to critically think and analyze different situations while in a new working environment. 
+
+The attached PDF includes my daily journals, certificates of completion, and detailed reflections. It consists of all of the highlights and achievements that I accomplished and the opportunities that I took along the way.
+        </p>
+        <div class="qr-area">
+          <div class="qr-box-2" id="qr-portfolio-2">
+          <img src="qr-portfolio-2.png" alt="qr-portfolio-2">
+          <span class="qr-label">Scan to view portfolio</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resume Card -->
+      <div class="card">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" stroke-width="1.8">
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10 9 9 9 8 9"/>
+          </svg>
+        </div>
+        <h3>Resume</h3>
+        <p>
+
+As an aspiring engineer, I have developed a solid foundation in mathematical principles and technical drafting. My work immersion has allowed me to practice professional ethics and technical documentation in a real-world engineering environment.
+
+Click the link on the right to download my full Curriculum Vitae, which includes my academic honors, seminars attended, and technical proficiencies.
+        </p>
+        <div class="qr-area">
+        <div class="qr-box-2" id="qr-resume-2">
+          <img src="qr-resume-2.png" alt="qr-resume-2">
+        </div>
+          <span class="qr-label">Scan to view resume</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────────── -->
+  <footer>
+    <p>© 2026 Your Name · Crafted with care</p>
+  </footer>
+
+  <!-- JavaScript (loaded last so the DOM is ready) -->
+  <script src="index.js"></script>
+
+</body>
+</html>
